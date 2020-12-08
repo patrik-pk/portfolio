@@ -1,0 +1,60 @@
+.nav {
+    position: relative;
+    width: 100%;
+    height: $navbar-height;
+    background: black;
+    position: absolute;
+    bottom: 0 - $navbar-height;
+    z-index: 10;
+    &.fixed {
+        position: fixed;
+        top: 0;
+    }
+
+    // @include mobile-portrait {
+    //     display: flex;
+    //     justify-content: center;
+    // }
+
+    // @include mobile-landscape {
+    //     display: flex;
+    //     justify-content: center;
+    // }
+
+    ul {
+        margin-top: 20px;
+        margin-right: 40px;
+        float: right;
+
+        // @include mobile-portrait { margin-right: 0; }
+        // @include mobile-landscape { margin-right: 0; }
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: lighter;
+            list-style-type: none;
+            transition: 500ms;
+            font-size: 16px;
+            &:hover {
+                color: $dark-red;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                color: $dark-red;
+            }
+
+            // @include mobile-portrait {
+            //     margin: 0 7px;
+            //     font-size: 14px;
+            // }
+        }
+    }
+}

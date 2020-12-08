@@ -1,0 +1,598 @@
+.header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.header .language-options {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .language-options .lang-btn {
+  padding: 10px;
+  background: white;
+  color: #EB1962;
+  font-weight: bold;
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+}
+
+.header .language-options .lang-btn:not(.active):hover {
+  background: #EB1962;
+  color: white;
+}
+
+.header .language-options .lang-btn.active {
+  background: black;
+  color: white;
+  cursor: default;
+}
+
+.header .headings {
+  height: calc(100vh - (60px));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .headings h1 {
+  font-size: 48px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.header .headings h2 {
+  font-size: 32px;
+  font-weight: lighter;
+  color: white;
+}
+
+.header .headings .start-btn {
+  border: 2px white solid;
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-size: 24px;
+  color: white;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.header .headings .start-btn:hover {
+  background: white;
+  border: 2px white solid;
+  color: #EB1962;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: black;
+  position: absolute;
+  bottom: -60px;
+  z-index: 10;
+}
+
+.nav.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.nav ul {
+  margin-top: 20px;
+  margin-right: 40px;
+  float: right;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: lighter;
+  list-style-type: none;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  font-size: 16px;
+}
+
+.nav ul li:hover {
+  color: #EB1962;
+}
+
+.nav ul li:last-child {
+  margin-right: 0;
+}
+
+.nav ul li.active {
+  color: #EB1962;
+}
+
+.about .about-container {
+  width: 100%;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.about .about-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.about .about-container .content .text {
+  width: 480px;
+}
+
+.about .about-container .content .text p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6rem;
+  text-align: center;
+}
+
+.portfolio {
+  height: auto;
+  background: #f9f9f9;
+}
+
+.portfolio .portfolio-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .portfolio-container .content.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio .portfolio-container .content {
+  position: relative;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  height: 400px;
+  margin: 75px auto 0 auto;
+  padding-bottom: 100px;
+}
+
+.portfolio .portfolio-container .content .left {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .portfolio-container .content .left .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio .portfolio-container .content .left .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .portfolio-container .content .right {
+  width: 50%;
+}
+
+.portfolio .portfolio-container .content .right .right-container {
+  position: relative;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio .portfolio-container .content .right .right-container .heading {
+  color: #EB1962;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text {
+  height: 270px;
+  margin: 25px 30px 0 0;
+  padding-right: 10px;
+  line-height: 23px;
+  overflow-y: scroll !important;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text ul {
+  padding-top: 5px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text ul li {
+  list-style-position: inside;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text::-webkit-scrollbar {
+  width: 12px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text::-webkit-scrollbar-track {
+  background: #FFC1CC;
+  border-radius: 10px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #EB1962;
+}
+
+.portfolio .portfolio-container .content .right .right-container .link-buttons {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 13px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .link-buttons a {
+  padding: 3px 6px;
+  border: 2px #EB1962 solid;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  color: #EB1962;
+  font-size: 16px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .link-buttons a:nth-child(2) {
+  margin-left: 10px;
+}
+
+.portfolio .portfolio-container .content .right .right-container .link-buttons a.active:hover {
+  background: #EB1962;
+  color: white;
+}
+
+@-webkit-keyframes animation {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolio .portfolio-container .animation {
+  -webkit-animation-name: animation;
+          animation-name: animation;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+
+.portfolio .portfolio-container .arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border: none;
+}
+
+.portfolio .portfolio-container .arrow svg polyline {
+  stroke-width: 3;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  stroke: #EB1962;
+}
+
+.portfolio .portfolio-container .arrow:active polyline {
+  stroke-width: 6;
+}
+
+.portfolio .portfolio-container .prev {
+  left: 50px;
+}
+
+.portfolio .portfolio-container .next {
+  right: 50px;
+}
+
+.portfolio .portfolio-container .dots {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  bottom: 35px;
+}
+
+.portfolio .portfolio-container .dots .dot {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #FFC1CC;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.portfolio .portfolio-container .dots .dot.active {
+  background: #EB1962;
+}
+
+.contact .contact-container .content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  margin: auto;
+  padding: 50px 0 100px 0;
+}
+
+.contact .contact-container .content .first-p {
+  padding-top: 20px;
+  color: #EB1962;
+}
+
+.contact .contact-container .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 30px;
+}
+
+.contact .contact-container .content form input.name, .contact .contact-container .content form input.email {
+  margin-bottom: 10px;
+  height: 30px;
+  border: 1px #EB1962 solid;
+  padding: 1px 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.contact .contact-container .content form textarea.message {
+  margin-bottom: 10px;
+  resize: vertical;
+  border: 1px #EB1962 solid;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.contact .contact-container .content form input.submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100px;
+  padding: 5px 3px;
+  background: none;
+  border: 1px #EB1962 solid;
+  color: #EB1962;
+  cursor: pointer;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.contact .contact-container .content form input.submit:hover {
+  background: #EB1962;
+  color: white;
+}
+
+.contact .contact-container .content #contact-fail {
+  margin-top: 15px;
+}
+
+.contact .contact-container .content .second-p {
+  padding-top: 30px;
+  color: #EB1962;
+}
+
+.footer {
+  position: relative;
+  height: 150px;
+  background: black;
+}
+
+.footer .social-media {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .social-media a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 15px;
+  background: white;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.footer .social-media a:hover {
+  background: black;
+}
+
+.footer .social-media a img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer .arrow-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -30px;
+  right: 70px;
+  width: 60px;
+  height: 60px;
+  background: #EB1962;
+  cursor: pointer;
+}
+
+.footer .arrow-up svg {
+  width: 20px;
+  padding-top: 20px;
+}
+
+.footer .copyright p {
+  padding-top: 70px;
+  color: #ddd;
+  text-align: center;
+  font-size: 12px;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* a {
+  text-decoration: none;
+  color: #EB1962;
+}
+
+* a.link:hover {
+  text-decoration: underline;
+}
+
+* button {
+  padding: 2px;
+  background: none;
+  border: 1px black solid;
+  cursor: pointer;
+  outline: none;
+}
+
+* .bold {
+  font-weight: bold;
+}
+
+* .dark-red {
+  color: #EB1962;
+}
+
+* .section-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-top: 70px;
+}
+
+* .section-heading h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding-bottom: 1px;
+  border-bottom: 2px #EB1962 solid;
+  color: #EB1962;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+* ::-webkit-scrollbar {
+  width: 14px;
+}
+
+* ::-webkit-scrollbar-track {
+  background: black;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #EB1962;
+}
+/*# sourceMappingURL=main.css.map */

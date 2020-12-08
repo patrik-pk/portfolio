@@ -1,0 +1,54 @@
+.about {
+    //background: rgb(249, 249, 249);
+
+    .about-container {
+        width: 100%;
+        margin: auto;
+        padding-top: $navbar-height;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 50px 0;
+
+            // @include mobile-portrait { padding: 20px 0; }
+            // @include mobile-landscape { padding: 30px 0; }
+            // @include tablet-portrait { padding: 40px 0; }
+            // @include tablet-landscape { padding: 50px 0; }
+               
+            .text {
+                width: 480px;
+
+                // @include mobile-portrait { width: 75%; }
+                // @include mobile-landscape { width: 60%; }
+                // @include tablet-portrait { width: 50%; }
+                // @include tablet-landscape { width: 35%; }
+                
+                p {
+                    font-size: 1.1rem;
+                    margin-bottom: 15px;
+                    line-height: 1.6rem;
+                    text-align: center;
+
+    
+                    // @include mobile-portrait {
+                    //     font-size: 0.9rem;
+                    //     line-height: 1.3rem;
+                    // }
+    
+                    // @include mobile-landscape {
+                    //     font-size: 1rem;
+                    //     line-height: 1.5rem;
+                    // }
+    
+                    // @include tablet-portrait {
+                    //     font-size: 1rem;
+                    //     line-height: 1.5rem;
+                    // }
+                }
+            }
+        }
+    }
+}

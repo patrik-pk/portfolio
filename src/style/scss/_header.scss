@@ -1,0 +1,90 @@
+.header {
+    position: relative;
+    // background: url('../../img/background.jpg'); set in component file
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+    .language-options {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: flex;
+        
+        .lang-btn {
+            padding: 10px;
+            background: white;
+            color: $dark-red;
+            font-weight: bold;
+            transition: 500ms all;
+
+            &:not(.active):hover {
+                background: $dark-red;
+                color: white;
+            }
+
+            &.active {
+                background: black;
+                color: white;
+                cursor: default;
+            }
+        }
+    }
+
+    .headings {
+        height: calc(100vh - (#{$navbar-height}));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 48px;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+            // @include mobile-portrait { font-size: 28px; }
+            // @include mobile-landscape { font-size: 36px; }
+            // @include tablet-portrait { font-size: 40px; }
+            // @include tablet-landscape { font-size: 42px; }
+
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: lighter;
+            color: white;
+            //letter-spacing: 1px;
+
+            // @include mobile-portrait {
+            //     font-size: 22px;
+            //     padding-top: 3px;
+            // }
+
+            // @include mobile-landscape { font-size: 26px; }
+            // @include tablet-portrait { font-size: 28px; }
+            // @include tablet-landscape { font-size: 30px; }
+        }
+
+        .start-btn {
+            border: 2px white solid;
+            margin-top: 10px;
+            padding: 5px 20px;
+            font-size: 24px;
+            color: white;
+            transition: all 500ms;
+            &:hover {
+                background: white;
+                border: 2px white solid;
+                color: $dark-red;
+            }
+            
+            // @include mobile-portrait { font-size: 16px; }
+            // @include mobile-landscape { font-size: 20px; }
+            // @include tablet-portrait { font-size: 22px; }
+            // @include tablet-landscape { font-size: 24px; }
+        }
+    }
+}

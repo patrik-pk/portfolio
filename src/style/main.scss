@@ -1,0 +1,90 @@
+// background url: https://pixabay.com/photos/leaves-autumn-purple-fall-season-1031355/
+// linkedin icon: https://www.flaticon.com/free-icon/linkedin_121509#term=linkedin&page=1&position=22
+// github icon: https://www.flaticon.com/free-icon/github-logo-silhouette-in-a-square_38401
+
+@import './scss/media-queries';
+@import './scss/variables';
+@import './scss/header';
+@import './scss/navbar';
+@import './scss/about';
+@import './scss/portfolio';
+@import './scss/contact';
+@import './scss/footer';
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        color: $dark-red;
+        &.link:hover {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        padding: 2px;
+        background: none;
+        border: 1px black solid;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .dark-red {
+        color: $dark-red;
+    }
+
+    // Section Headings
+    .section-heading {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 70px;
+
+        // @include mobile-portrait { padding-top: 25px; }
+        // @include mobile-landscape { padding-top: 30px; }
+        // @include tablet-portrait { padding-top: 40px; }
+        // @include tablet-landscape { padding-top: 40px; }
+
+        h2 {
+            width: max-content;
+            padding-bottom: 1px;
+            border-bottom: 2px $dark-red solid;
+            color: $dark-red;
+            text-transform: uppercase;
+            font-weight: bolder;
+            font-size: 26px;
+            letter-spacing: 2px;
+
+            // @mixin headings_h2_responsive($font-size) {
+            //     font-size: $font-size;
+            //     letter-spacing: 1px;
+            // }
+
+            // @include mobile-portrait { @include headings_h2_responsive(16px); }
+            // @include mobile-landscape { @include headings_h2_responsive(20px); }
+            // @include tablet-portrait { @include headings_h2_responsive(22px); } 
+            // @include tablet-landscape { @include headings_h2_responsive(24px); } 
+        }   
+    }
+
+    // Scrollbar
+
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: $dark-red;
+    }
+}

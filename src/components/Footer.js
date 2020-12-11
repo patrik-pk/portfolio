@@ -22,7 +22,7 @@ const Footer = () => {
                 </a>
             </div>
 
-            <div className='arrow-up' id='up-btn'>
+            <div className='arrow-up' onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}>
                 <img src={arrow} alt='' />
             </div>
 

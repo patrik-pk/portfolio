@@ -9,6 +9,12 @@ const PortfolioItem = ({
         technologies,
         description,
         links
+    },
+    lang: {
+        madeIn: langMadeIn,
+        updatedIn: langUpdatedIn,
+        technologiesUsed,
+        projectDescription
     }
 }) => {
     return (
@@ -24,20 +30,20 @@ const PortfolioItem = ({
                     <div className='text'>
 
                         {/* Made In */}
-                        <span className='dark-red'>Made in:</span> {madeIn} <br/>
+                        <span className='dark-red'>{langMadeIn}</span> {madeIn} <br/>
 
                         {/* Updated In */}
                         { updatedIn && 
                             <Fragment>
-                                <span className='dark-red'>Updated in:</span> {updatedIn} <br />
+                                <span className='dark-red'>{langUpdatedIn}</span> {updatedIn} <br />
                             </Fragment> 
                         }
 
                         {/* Technologies Used */}
-                        <p><span className='dark-red'>Technology used:</span> {technologies}</p> <br/>
+                        <p><span className='dark-red'>{technologiesUsed}</span> {technologies}</p> <br/>
 
                         {/* Project Description */}
-                        <p><span className='dark-red'>Project description:</span>  <br/></p>
+                        <p><span className='dark-red'>{projectDescription}</span>  <br/></p>
                         {description}
 
                     </div>

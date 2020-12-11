@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import rpg from '../../img/projects/rpg.jpg'
 import zan from '../../img/projects/ZaN.jpg'
+import todo from '../../img/projects/todo_app.jpg'
+import portfolio from '../../img/projects/portfolio.jpg'
 
 const en = {
     header: {
@@ -43,6 +45,10 @@ const en = {
     },
     portfolio: {
         heading: 'Portfolio',
+        madeIn: 'Made in:',
+        updatedIn: 'Updated in:',
+        technologiesUsed: 'Technologies used:',
+        projectDescription: 'Project description:',
         projects: [
             {
                 imgSrc: rpg,
@@ -90,7 +96,54 @@ const en = {
                         text: 'View Code'
                     }
                 ]
-            }
+            },
+            {
+                imgSrc: todo,
+                heading: 'Todo App',
+                madeIn: '07/2020',
+                technologies: 'React.js, Redux',
+                description: (
+                    <Fragment>
+                        <p>
+                            Project Description here
+                        </p>
+                    </Fragment>
+                ),
+                links: [
+                    {
+                        linkTo: 'https://patrikpk-todo.netlify.app/',
+                        text: 'Try Live'
+                    },
+                    {
+                        linkTo: 'https://github.com/patrik-pk/todo-app',
+                        text: 'View Code'
+                    }
+                ]
+            },
+            {
+                imgSrc: portfolio,
+                heading: 'Portfolio',
+                madeIn: '09/2019',
+                updatedIn: '12/2020',
+                technologies: 'React.js',
+                description: (
+                    <Fragment>
+                        <p>
+                            Project Description here
+                        </p>
+                    </Fragment>
+                ),
+                links: [
+                    {
+                        linkTo: 'http://patrikpk-portfolio.netlify.app/',
+                        text: 'Try Live'
+                    },
+                    {
+                        linkTo: 'https://github.com/patrik-pk/portfolio',
+                        text: 'View Code'
+                    }
+                ]
+            },
         ],
     },
     contact: {

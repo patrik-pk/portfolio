@@ -1,27 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
+import AppContext from '../context/appContext'
 
-const Navbar = ({ lang: [home, about, portfolio, contact] }) => {
+const Navbar = () => {
+    const appContext = useContext(AppContext)
+    const {
+        lang: {data: { nav: [home, about, portfolio, contact] } } 
+    } = appContext
 
-    let currentScroll = 0
-    let fixedClass = ''
+    const navRef = useRef()
+    const [fixedClass, setFixedClass] = useState('')
+    
+    useEffect(() => {
+        const navOffset = navRef.current.offsetTop
 
-    // const handleScroll = () => {
-    //     currentScroll = window.scrollY
-    //     fixedClass = currentScroll > 1000 ? 'fixed' : ''
+        const handleScroll = () => {
+            const scrollOffset = window.pageYOffset
+            setFixedClass(scrollOffset >= navOffset ? 'fixed' : '')
+        }
 
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll)
-    // }, [handleScroll])
-
-    // window.scroll({ top: 0, behavior: 'smooth' })
-
-
-    console.log(currentScroll)
+        window.addEventListener('scroll', handleScroll)
+    }, [])
 
     return (
-        <nav className={`nav ${fixedClass}`}>
+        <nav className={`nav ${fixedClass}`} ref={navRef} >
             <ul>
                 <li className='scroll-link' id='home'>{home}</li>
                 <li className='scroll-link' id='about'>{about}</li>

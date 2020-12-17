@@ -1,32 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../context/appContext'
 import bg from '../img/background.jpg'
+import cz from '../data/lang/cz'
+import en from '../data/lang/en'
 
-const Header = ({ 
-    lang: { 
-        type: langType, 
-        data: { 
-            header: { 
-                startButton
-            } 
-        } 
-    }, 
-    setLang,
-    cz,
-    en 
-}) => {
+const Header = () => {
+    const appContext = useContext(AppContext)
+    const { 
+        lang: {
+            type: langType,
+            data: {
+                header: {
+                    startButton
+                }
+            }
+        }, 
+        setLang 
+    } = appContext
 
     return (
         <header className='header' style={{ backgroundImage: `url(${bg})` }}>
             <div className='language-options'>
                 <button 
                     className={`lang-btn ${langType === 'cz' ? 'active' : ''}`} 
-                    onClick={() => setLang({ type: 'cz', data: cz })} 
+                    onClick={() => setLang('cz', cz)} 
                     type='button' 
                     id='lang_cs'
                 >CZ</button>
                 <button 
                     className={`lang-btn ${langType === 'en' ? 'active' : ''}`} 
-                    onClick={() => setLang({ type: 'en', data: en })}
+                    onClick={() => setLang('en', en)}
                     type='button' 
                     id='lang_en'
                 >EN</button>

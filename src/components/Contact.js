@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../context/appContext'
 
-const Contact = ({ 
-    lang: { 
-        heading, 
-        firstParagraph, 
-        secondParagraph,
-        form: {
-            name,
-            email,
-            message,
-            submit
-        } 
-    } 
-}) => {
+const Contact = () => {
+    const appContext = useContext(AppContext)
+    const {
+        lang: { data: { contact: {
+            heading,
+            firstParagraph,
+            secondParagraph,
+            form: {
+                name,
+                email,
+                message,
+                submit
+            } 
+        }}}
+    } = appContext
+
     return (
         <section className='contact'>
             <div className='contact-container'>

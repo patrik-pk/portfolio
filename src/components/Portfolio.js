@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import AppContext from '../context/appContext'
 
 import PortfolioItem from './PortfolioItem'
 import { ReactComponent as ArrowLeft } from '../img/icons/arrow-left.svg'
 import { ReactComponent as ArrowRight } from '../img/icons/arrow-right.svg'
 
-const Portfolio = ({ 
-    lang: { 
-        heading,
-        madeIn,
-        updatedIn,
-        technologiesUsed,
-        projectDescription,
-        projects 
-    } 
-}) => {
+const Portfolio = () => {
+    const appContext = useContext(AppContext)
+    const {
+        lang: { data: { portfolio: {
+            heading,
+            madeIn,
+            updatedIn,
+            technologiesUsed,
+            projectDescription,
+            projects 
+        }}}
+    } = appContext
 
     // Slideshow Functionality
     const [current, setCurrent] = useState(0)

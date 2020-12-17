@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../context/appContext'
 
-const About = ({ lang: { heading, text }}) => {
+
+const About = () => {
+    const appContext = useContext(AppContext)
+    const {
+        lang: { data: { about: {
+            heading,
+            text
+        }}}
+    } = appContext
+
     return (
         <section className='about'>
             <div className='about-container'>

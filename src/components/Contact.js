@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useEffect } from 'react'
 import AppContext from '../context/appContext'
 
 const Contact = () => {
@@ -14,11 +14,19 @@ const Contact = () => {
                 message,
                 submit
             } 
-        }}}
+        }}},
+        setContactOffset
     } = appContext
 
+    const contactRef = useRef()
+
+    useEffect(() => {
+        setContactOffset(contactRef.current.offsetTop)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return (
-        <section className='contact'>
+        <section className='contact' ref={contactRef}>
             <div className='contact-container'>
 
                 <div className='section-heading'>

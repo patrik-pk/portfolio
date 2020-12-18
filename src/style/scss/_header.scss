@@ -40,39 +40,35 @@
         align-items: center;
 
         h1 {
-            font-size: 48px;
+            font-size: 28px;
             color: white;
             letter-spacing: 1px;
             font-weight: bold;
 
-            // @include mobile-portrait { font-size: 28px; }
-            // @include mobile-landscape { font-size: 36px; }
-            // @include tablet-portrait { font-size: 40px; }
-            // @include tablet-landscape { font-size: 42px; }
+            @include small { font-size: 36px; }
+            @include medium { font-size: 40px; }
+            @include large { font-size: 42px; }
+            @include extra-large { font-size: 48px; }
 
         }
 
         h2 {
-            font-size: 32px;
+            padding-top: 3px;
+            font-size: 22px;
             font-weight: lighter;
             color: white;
-            //letter-spacing: 1px;
 
-            // @include mobile-portrait {
-            //     font-size: 22px;
-            //     padding-top: 3px;
-            // }
-
-            // @include mobile-landscape { font-size: 26px; }
-            // @include tablet-portrait { font-size: 28px; }
-            // @include tablet-landscape { font-size: 30px; }
+            @include small { font-size: 26px; padding-top: 0; }
+            @include medium { font-size: 28px; }
+            @include large { font-size: 30px; }
+            @include extra-large { font-size: 32px; }
         }
 
         .start-btn {
             border: 2px white solid;
             margin-top: 10px;
             padding: 5px 20px;
-            font-size: 24px;
+            font-size: 16px;
             color: white;
             transition: all 500ms;
             &:hover {
@@ -85,6 +81,10 @@
             // @include mobile-landscape { font-size: 20px; }
             // @include tablet-portrait { font-size: 22px; }
             // @include tablet-landscape { font-size: 24px; }
+
+            @include small { font-size: 20px; }
+            @include medium { font-size: 22px; }
+            @include large { font-size: 24px; }
         }
     }
 }

@@ -45,7 +45,12 @@ const Portfolio = () => {
 
         for (let i = 0; i < projects.length; i++) {
             // active logic here
-            arr.push(<span key={i} className={`dot ${i === current ? 'active' : ''}`}></span>)
+            arr.push(<span 
+                key={i} 
+                className={`dot ${i === current ? 'active' : ''}`}
+                onClick={() => setCurrent(i)}
+            >
+            </span>)
         }
 
         return arr

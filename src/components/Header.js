@@ -15,7 +15,8 @@ const Header = () => {
                 }
             }
         }, 
-        setLang 
+        setLang,
+        aboutOffset 
     } = appContext
 
     return (
@@ -38,7 +39,10 @@ const Header = () => {
             <div className='headings'>
                 <h1>Patrik Pukanec</h1>
                 <h2>Frontend Developer</h2>
-                <button className='start-btn'>{ startButton }</button>
+                <button 
+                    className='start-btn' 
+                    onClick={() => window.scroll({ top: aboutOffset, behavior: 'smooth' })}
+                >{ startButton }</button>
             </div>
         </header>
     )

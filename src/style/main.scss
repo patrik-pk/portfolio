@@ -45,12 +45,11 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 70px;
+        padding-top: 25px;
 
-        // @include mobile-portrait { padding-top: 25px; }
-        // @include mobile-landscape { padding-top: 30px; }
-        // @include tablet-portrait { padding-top: 40px; }
-        // @include tablet-landscape { padding-top: 40px; }
+        @include small { padding-top: 30px; }
+        @include medium { padding-top: 40px; }
+        @include extra-large { padding-top: 70px; }
 
         h2 {
             width: max-content;
@@ -59,18 +58,16 @@
             color: $dark-red;
             text-transform: uppercase;
             font-weight: bolder;
-            font-size: 26px;
-            letter-spacing: 2px;
+            font-size: 16px;
+            letter-spacing: 1px;
 
-            // @mixin headings_h2_responsive($font-size) {
-            //     font-size: $font-size;
-            //     letter-spacing: 1px;
-            // }
-
-            // @include mobile-portrait { @include headings_h2_responsive(16px); }
-            // @include mobile-landscape { @include headings_h2_responsive(20px); }
-            // @include tablet-portrait { @include headings_h2_responsive(22px); } 
-            // @include tablet-landscape { @include headings_h2_responsive(24px); } 
+            @include small { font-size: 20px; }
+            @include medium { font-size: 22px; }
+            @include large { font-size: 24px; }
+            @include extra-large { 
+                font-size: 26px;
+                letter-spacing: 2px;
+            }
         }   
     }
 

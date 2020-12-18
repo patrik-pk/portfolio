@@ -11,42 +11,35 @@
             justify-content: center;
             align-items: center;
             margin: auto;
-            padding: 50px 0;
+            padding: 20px 0;
 
-            // @include mobile-portrait { padding: 20px 0; }
-            // @include mobile-landscape { padding: 30px 0; }
-            // @include tablet-portrait { padding: 40px 0; }
-            // @include tablet-landscape { padding: 50px 0; }
+            @include small { padding: 30px 0; }
+            @include medium { padding: 40px 0; }
+            @include large { padding: 50px 0; }
                
             .text {
-                width: 480px;
+                width: 75%;
 
-                // @include mobile-portrait { width: 75%; }
-                // @include mobile-landscape { width: 60%; }
-                // @include tablet-portrait { width: 50%; }
-                // @include tablet-landscape { width: 35%; }
+                @include small { width: 60%; }
+                @include medium { width: 50%; }
+                @include large { width: 35%; }
+                @include extra-large { width: 480px; }
                 
                 p {
-                    font-size: 1.1rem;
                     margin-bottom: 15px;
-                    line-height: 1.6rem;
                     text-align: center;
 
-    
-                    // @include mobile-portrait {
-                    //     font-size: 0.9rem;
-                    //     line-height: 1.3rem;
-                    // }
-    
-                    // @include mobile-landscape {
-                    //     font-size: 1rem;
-                    //     line-height: 1.5rem;
-                    // }
-    
-                    // @include tablet-portrait {
-                    //     font-size: 1rem;
-                    //     line-height: 1.5rem;
-                    // }
+                    font-size: 14px;
+                    line-height: 21px;
+
+                    @include small {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    @include large {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
                 }
             }
         }

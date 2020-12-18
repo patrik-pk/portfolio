@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import rpg from '../../img/projects/rpg.jpg'
+import progress_tracker from '../../img/projects/progress_tracker.jpg'
 import zan from '../../img/projects/ZaN.jpg'
 import todo from '../../img/projects/todo_app.jpg'
 import portfolio from '../../img/projects/portfolio.jpg'
@@ -19,8 +20,8 @@ const en = {
         text: (
             <Fragment>
                 <p>
-                    Hi. I am a <span className='bold dark-red'>Frontend Developer </span>
-                    from <span className='bold dark-red'>Czech Republic.</span> <br/>
+                    Hi. I am a <span className='dark-red'>Frontend Developer </span>
+                    from <span className='dark-red'>Czech Republic.</span> <br/>
                 </p>
                 <p>
                     I love solving logical problems and putting things together
@@ -32,10 +33,14 @@ const en = {
                     do things to the best of my ability. <br/>
                 </p>
                 <p>
-                    I chose <span className='bold dark-red'>React.js</span> as my specialization and use it
-                    along with <span className='bold dark-red'>Redux</span> for state management.
-                    <span className='bold dark-red'>JavaScript(ES6)</span>, <span className='bold dark-red'>HTML5</span> and
-                    <span className='bold dark-red'> CSS3</span> skills are a matter of course. <br />
+                    I chose <span className='dark-red'>React.js</span> as my specialization and use it
+                    along with <span className='dark-red'>Redux</span> for state management.
+                    <span className='dark-red'> JavaScript(ES6)</span>, <span className='dark-red'>HTML5</span> and
+                    <span className='dark-red'> CSS3</span> skills are a matter of course. <br />
+                </p>
+                <p>
+                    Recently I have been learning <span className='dark-red'>MERN stack </span>
+                    so I also have some knowledge about how backend works. <br />
                 </p>
                 <p>
                     I am always open to learning new stuff.
@@ -59,7 +64,10 @@ const en = {
                 description: (
                     <Fragment>
                         <p>
-                            Project Description here
+                            Browser based single player RPG game with a lot of functionalities like battle system, 
+                            inventory, crafting system, load & save (using localStorage) 
+                            and credits section with all icons used in this project. 
+                            You can find more detailed description on the projects GitHub page.
                         </p>
                     </Fragment>
                 ),
@@ -75,6 +83,27 @@ const en = {
                 ]
             },
             {
+                imgSrc: progress_tracker,
+                heading: 'Progress Tracker',
+                madeIn: '12/2020 - now',
+                technologies: 'MERN stack, Redux, Styled Components',
+                description: (
+                    <Fragment>
+                        <p>
+                            Fullstack web application for recording progress. Backend is built on
+                            Express.js and MongoDB. React with Redux is used on the frontend along with
+                            Styled Components.
+                        </p>
+                    </Fragment>
+                ),
+                links: [
+                    {
+                        linkTo: 'https://github.com/patrik-pk/progress-tracker',
+                        text: 'View Code'
+                    }
+                ]
+            },
+            {
                 imgSrc: zan,
                 heading: 'Ženich & Nevěsta',
                 madeIn: '04-05/2019',
@@ -82,7 +111,10 @@ const en = {
                 description: (
                     <Fragment>
                         <p>
-                            Project Description here
+                            Website of a wedding agency. This is one of my first projects that I did as
+                            my school projet. Originally it was supposed to be a static page for 
+                            information purposes but later on I added jQuery and tried to make a order system. 
+                            At the time I didn't really know what I was doing, so the project has a lot of bugs.
                         </p>
                     </Fragment>
                 ),
@@ -105,7 +137,10 @@ const en = {
                 description: (
                     <Fragment>
                         <p>
-                            Project Description here
+                            Simple Todo App in which you can add/edit/delete category. 
+                            Every category has its own Todos that you can also add/edit/delete. 
+                            Todos are displayed only with the same category as the active one. 
+                            When you delete a category, all its Todos are removed along with it.
                         </p>
                     </Fragment>
                 ),
@@ -125,11 +160,13 @@ const en = {
                 heading: 'Portfolio',
                 madeIn: '09/2019',
                 updatedIn: '12/2020',
-                technologies: 'React.js',
+                technologies: 'React.js, Context API',
                 description: (
                     <Fragment>
                         <p>
-                            Project Description here
+                            My actual portfolio site. Originally I used jQuery for scroll, active links, language and
+                            portfolio functionality, but later on I rewrote the project into React mainly for more
+                            readable code. For state managment I used built-in Context API. 
                         </p>
                     </Fragment>
                 ),

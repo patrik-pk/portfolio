@@ -1,5 +1,7 @@
 .nav {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: $navbar-height;
     background: black;
@@ -11,34 +13,30 @@
         top: 0;
     }
 
-    // @include mobile-portrait {
-    //     display: flex;
-    //     justify-content: center;
-    // }
-
-    // @include mobile-landscape {
-    //     display: flex;
-    //     justify-content: center;
-    // }
+    @include medium {
+        display: block;
+        justify-content: flex-start;
+    }
 
     ul {
         margin-top: 20px;
-        margin-right: 40px;
+        margin-right: 0px;
         float: right;
 
-        // @include mobile-portrait { margin-right: 0; }
-        // @include mobile-landscape { margin-right: 0; }
+        @include medium {
+            margin-right: 40px;
+        }
 
         li {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 7px;
             color: white;
             text-transform: uppercase;
             cursor: pointer;
             font-weight: lighter;
             list-style-type: none;
             transition: 500ms;
-            font-size: 16px;
+            font-size: 14px;
             &:hover {
                 color: $dark-red;
             }
@@ -51,10 +49,10 @@
                 color: $dark-red;
             }
 
-            // @include mobile-portrait {
-            //     margin: 0 7px;
-            //     font-size: 14px;
-            // }
+            @include small {
+                margin: 0 10px;
+                font-size: 16px;
+            }
         }
     }
 }
